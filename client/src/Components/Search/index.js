@@ -14,7 +14,7 @@ const SearchBooks = () => {
       });
   }, []);
   const handleSearch = (e) => {
-    API.findBook(e)
+    API.getBook(e)
       .then((response) => {
         console.log(response.data.items);
         setBook(response.data.items);

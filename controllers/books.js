@@ -5,7 +5,8 @@ const db = require("../models");
 
 // axios
 router.get("/api/books", (req, res) => {
-  db.Book.find({})
+  db.getBook
+    .find({})
     .then((foundBooks) => {
       res.json(foundBooks);
     })
