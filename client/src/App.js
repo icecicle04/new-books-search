@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Search from "./Components/Search";
-import Saved from "./Components/Saved";
 
 function App() {
   return (
