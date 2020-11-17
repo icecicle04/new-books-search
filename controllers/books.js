@@ -3,10 +3,9 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 const db = require("../models");
 
-// axios 
+// axios
 router.get("/api/books", (req, res) => {
   db.Book.find({})
-    .populate("authors", "firstName lastName")
     .then((foundBooks) => {
       res.json(foundBooks);
     })
@@ -21,8 +20,18 @@ router.get("/api/books", (req, res) => {
 });
 
 router.post("/api/books", (req, res) => {
-const newBook = {
-    title: req.body.title,
-    pages: req.body.pages,
-    author: req.body.author,
-};
+  console.log(req.body);
+  db.Book.create({})
+    .then((newBook) => {
+      console.log(newBook);
+    })
+    .then((err) => {
+      if (err) throw err;
+    });
+});
+
+router.delete("/api/books/:id", (req, res) => {
+  console.log(req.body);
+});
+
+export default router;
