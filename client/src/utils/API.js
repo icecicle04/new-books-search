@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const googleSearchAPI = "https:www.googleapis.com/books/v1/volumes?q=";
+const googleSearchAPI = "https://www.googleapis.com/books/v1/volumes?q=";
 
 export default {
   getBook: function (term) {
