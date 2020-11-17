@@ -1,4 +1,4 @@
-# hw-06-weather-dashboard
+# Google Books API Search
 
 ![<ALT>](https://img.shields.io/badge/Google-Books-blue)
 
